@@ -1,0 +1,7 @@
+grupo,codec,kbps_nominal,arquivo,bytes,kbps_efetivo
+G4,MP3,48,mp3_48k.mp3,50408,48.2
+G4,MP3,128,mp3_128k.mp3,134208,128.4
+G4,AAC,48,aac_48k.m4a,52085,50.1
+G4,AAC,128,aac_128k.m4a,135726,130.6
+G4,Vorbis,48,vorbis_48k.ogg,49074,47.2
+G4,Vorbis,128,vorbis_128k.ogg,125522,120.7
