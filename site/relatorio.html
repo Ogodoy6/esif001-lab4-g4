@@ -61,7 +61,7 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 </tbody>
 </table>
 <p>A sequência seguiu os notebooks Lab4.1 → Lab4.2 → Lab4.3 → Lab4.4 (produtor) → Lab4.5. O gabarito privado do áudio (<code>gabarito_audio_PRIVADO.csv</code>) ficou só com o G4.</p>
-<p>Como o G3 não realizou a avaliação cruzada, as notas subjetivas do pacote do G4 foram obtidas por simulação, conforme orientação do professor. O modelo usado está descrito nas seções 3.2 e 4.3.</p>
+<p>Como o G3 não realizou a avaliação cruzada, as notas subjetivas foram obtidas por simulação, conforme orientação do professor: as do pacote do G4 nas seções 3.2 e 4.3, e a avaliação de um pacote hipotético do G3 pelo G4 nas seções 3.3 e 4.4.</p>
 <p>Além das medidas pedidas, calculamos com <code>scripts/analise.py</code>:</p>
 <ul>
 <li>a largura de banda efetiva, definida como a frequência acima da qual o espectro médio cai 60 dB abaixo do pico;</li>
@@ -299,8 +299,50 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 <li>O MP3 48k tem a maior dispersão: um avaliador (A4) foi mais tolerante e outro (A3) mais rigoroso. Isso costuma acontecer com artefatos "metálicos", que alguns ouvintes notam muito e outros quase nada.</li>
 <li>Critério de consistência: todos os avaliadores deram ≥ 90 à referência oculta, então nenhum seria descartado.</li>
 </ul>
-<h3>3.3 Avaliação do pacote do G3 pelo G4 — não realizada</h3>
-<p>O G3 não disponibilizou o pacote de áudio (<code>G3/pacote_audio</code>), então os integrantes do G4 não puderam avaliá-lo.</p>
+<h3>3.3 Avaliação do pacote do G3 pelo G4 (simulado)</h3>
+<p style="background:#fff4e5;border-left:4px solid #e07b39;padding:.6em .9em;margin:1em 0"><strong>Resultado simulado.</strong> O G3 não disponibilizou o pacote, então tanto o pacote quanto as notas abaixo foram gerados por modelo, conforme orientação do professor. Não são notas de pessoas.</p>
+<p>O G3 não disponibilizou o pacote de áudio (<code>G3/pacote_audio</code>). Para completar a avaliação cruzada, simulamos o que os integrantes do G4 (A1–A4) teriam respondido a um pacote hipotético do G3.</p>
+<p><strong>Hipóteses sobre o pacote do G3.</strong></p>
+<ul>
+<li><strong>Estrutura:</strong> a do roteiro, com referência oculta, âncora (passa-baixas 3,5 kHz) e quatro versões codificadas.</li>
+<li><strong>Versões escolhidas:</strong> AAC 128k, Vorbis 128k, Vorbis 48k e MP3 48k. É uma combinação diferente da do G4 e cobre os três codecs.</li>
+<li><strong>Banda de cada versão:</strong> como não temos os arquivos do G3, usamos a banda medida nas versões do G4 com os mesmos codecs e taxas.</li>
+<li><strong>Gabarito sorteado:</strong> S01 = Vorbis 48k, S02 = âncora, S03 = AAC 128k, S04 = MP3 48k, S05 = Vorbis 128k, S06 = referência oculta.</li>
+</ul>
+<p><strong>Modelo.</strong> O mesmo da seção 3.2: nota esperada pela reta da banda (âncora = 25, referência = 97), penalidade de −10 para MP3 48k (buracos espectrais) e também para Vorbis 48k (ruído granulado entre 10 e 14 kHz), viés por avaliador N(0, 5) e ruído N(0, 7), limitado a 0–100. Semente 3434, diferente da usada na seção 3.2.</p>
+<table>
+<thead>
+<tr><th>Condição</th><th style="text-align: right;">Banda (kHz)</th><th style="text-align: right;">Nota esperada</th><th style="text-align: right;">n</th><th style="text-align: right;">Média</th><th style="text-align: right;">Desvio-padrão</th><th style="text-align: right;">Mín–Máx</th></tr>
+</thead>
+<tbody>
+<tr><td>Referência oculta</td><td style="text-align: right;">18,1</td><td style="text-align: right;">97,0</td><td style="text-align: right;">4</td><td style="text-align: right;">98,8</td><td style="text-align: right;">2,5</td><td style="text-align: right;">95–100</td></tr>
+<tr><td>Vorbis 128k</td><td style="text-align: right;">17,9</td><td style="text-align: right;">96,0</td><td style="text-align: right;">4</td><td style="text-align: right;">94,8</td><td style="text-align: right;">6,2</td><td style="text-align: right;">88–100</td></tr>
+<tr><td>AAC 128k</td><td style="text-align: right;">17,2</td><td style="text-align: right;">92,6</td><td style="text-align: right;">4</td><td style="text-align: right;">93,2</td><td style="text-align: right;">10,3</td><td style="text-align: right;">78–100</td></tr>
+<tr><td>Vorbis 48k</td><td style="text-align: right;">14,1</td><td style="text-align: right;">67,3</td><td style="text-align: right;">4</td><td style="text-align: right;">67,2</td><td style="text-align: right;">8,4</td><td style="text-align: right;">55–74</td></tr>
+<tr><td>MP3 48k</td><td style="text-align: right;">7,8</td><td style="text-align: right;">36,2</td><td style="text-align: right;">4</td><td style="text-align: right;">34,2</td><td style="text-align: right;">7,2</td><td style="text-align: right;">28–41</td></tr>
+<tr><td>Âncora (LP 3,5 kHz)</td><td style="text-align: right;">3,5</td><td style="text-align: right;">25,0</td><td style="text-align: right;">4</td><td style="text-align: right;">28,5</td><td style="text-align: right;">8,3</td><td style="text-align: right;">21–38</td></tr>
+</tbody>
+</table>
+<p>Notas individuais (simuladas):</p>
+<table>
+<thead>
+<tr><th>Avaliador (G4)</th><th style="text-align: right;">Ref. oculta</th><th style="text-align: right;">Vorbis 128k</th><th style="text-align: right;">AAC 128k</th><th style="text-align: right;">Vorbis 48k</th><th style="text-align: right;">MP3 48k</th><th style="text-align: right;">Âncora</th></tr>
+</thead>
+<tbody>
+<tr><td>A1</td><td style="text-align: right;">100</td><td style="text-align: right;">100</td><td style="text-align: right;">99</td><td style="text-align: right;">69</td><td style="text-align: right;">41</td><td style="text-align: right;">38</td></tr>
+<tr><td>A2</td><td style="text-align: right;">95</td><td style="text-align: right;">88</td><td style="text-align: right;">78</td><td style="text-align: right;">55</td><td style="text-align: right;">28</td><td style="text-align: right;">21</td></tr>
+<tr><td>A3</td><td style="text-align: right;">100</td><td style="text-align: right;">91</td><td style="text-align: right;">100</td><td style="text-align: right;">74</td><td style="text-align: right;">28</td><td style="text-align: right;">22</td></tr>
+<tr><td>A4</td><td style="text-align: right;">100</td><td style="text-align: right;">100</td><td style="text-align: right;">96</td><td style="text-align: right;">71</td><td style="text-align: right;">40</td><td style="text-align: right;">33</td></tr>
+</tbody>
+</table>
+<svg viewBox="0 0 560 212" style="max-width:560px;width:100%;display:block;margin:1em auto;font:11px sans-serif" role="img" aria-label="Notas simuladas de áudio"><text x="280.0" y="14" text-anchor="middle" font-weight="600">SIMULADO: notas do G4 para o pacote de áudio do G3</text><line x1="90" y1="26" x2="90" y2="182" stroke="#dfe3e8"/><text x="90" y="196" text-anchor="middle" fill="#5b6670">0</text><line x1="180" y1="26" x2="180" y2="182" stroke="#dfe3e8"/><text x="180" y="196" text-anchor="middle" fill="#5b6670">20</text><line x1="270" y1="26" x2="270" y2="182" stroke="#dfe3e8"/><text x="270" y="196" text-anchor="middle" fill="#5b6670">40</text><line x1="360" y1="26" x2="360" y2="182" stroke="#dfe3e8"/><text x="360" y="196" text-anchor="middle" fill="#5b6670">60</text><line x1="450" y1="26" x2="450" y2="182" stroke="#dfe3e8"/><text x="450" y="196" text-anchor="middle" fill="#5b6670">80</text><line x1="540" y1="26" x2="540" y2="182" stroke="#dfe3e8"/><text x="540" y="196" text-anchor="middle" fill="#5b6670">100</text><text x="84" y="43" text-anchor="end">Ref. oculta</text><rect x="90" y="32" width="444" height="14" fill="#f5c9a8"/><circle cx="540" cy="39" r="3.5" fill="#e07b39"/><circle cx="518" cy="39" r="3.5" fill="#e07b39"/><circle cx="540" cy="39" r="3.5" fill="#e07b39"/><circle cx="540" cy="39" r="3.5" fill="#e07b39"/><line x1="534" y1="30" x2="534" y2="48" stroke="#1d2329" stroke-width="2"/><text x="84" y="69" text-anchor="end">Vorbis 128k</text><rect x="90" y="58" width="426" height="14" fill="#f5c9a8"/><circle cx="540" cy="65" r="3.5" fill="#e07b39"/><circle cx="486" cy="65" r="3.5" fill="#e07b39"/><circle cx="500" cy="65" r="3.5" fill="#e07b39"/><circle cx="540" cy="65" r="3.5" fill="#e07b39"/><line x1="516" y1="56" x2="516" y2="74" stroke="#1d2329" stroke-width="2"/><text x="84" y="95" text-anchor="end">AAC 128k</text><rect x="90" y="84" width="420" height="14" fill="#f5c9a8"/><circle cx="536" cy="91" r="3.5" fill="#e07b39"/><circle cx="441" cy="91" r="3.5" fill="#e07b39"/><circle cx="540" cy="91" r="3.5" fill="#e07b39"/><circle cx="522" cy="91" r="3.5" fill="#e07b39"/><line x1="510" y1="82" x2="510" y2="100" stroke="#1d2329" stroke-width="2"/><text x="84" y="121" text-anchor="end">Vorbis 48k</text><rect x="90" y="110" width="303" height="14" fill="#f5c9a8"/><circle cx="400" cy="117" r="3.5" fill="#e07b39"/><circle cx="338" cy="117" r="3.5" fill="#e07b39"/><circle cx="423" cy="117" r="3.5" fill="#e07b39"/><circle cx="410" cy="117" r="3.5" fill="#e07b39"/><line x1="393" y1="108" x2="393" y2="126" stroke="#1d2329" stroke-width="2"/><text x="84" y="147" text-anchor="end">MP3 48k</text><rect x="90" y="136" width="154" height="14" fill="#f5c9a8"/><circle cx="274" cy="143" r="3.5" fill="#e07b39"/><circle cx="216" cy="143" r="3.5" fill="#e07b39"/><circle cx="216" cy="143" r="3.5" fill="#e07b39"/><circle cx="270" cy="143" r="3.5" fill="#e07b39"/><line x1="244" y1="134" x2="244" y2="152" stroke="#1d2329" stroke-width="2"/><text x="84" y="173" text-anchor="end">Âncora</text><rect x="90" y="162" width="128" height="14" fill="#f5c9a8"/><circle cx="261" cy="169" r="3.5" fill="#e07b39"/><circle cx="184" cy="169" r="3.5" fill="#e07b39"/><circle cx="189" cy="169" r="3.5" fill="#e07b39"/><circle cx="238" cy="169" r="3.5" fill="#e07b39"/><line x1="218" y1="160" x2="218" y2="178" stroke="#1d2329" stroke-width="2"/><text x="315.0" y="210" text-anchor="middle" fill="#5b6670">Nota (0–100) · barra = média, pontos = avaliadores</text></svg>
+<ul>
+<li>As versões de 128 kbit/s (AAC e Vorbis) ficam junto da referência oculta, como no pacote do G4.</li>
+<li>O <strong>Vorbis 48k</strong>, que não existia no pacote do G4, fica numa faixa intermediária (~67). Ele mantém banda até ~14 kHz, mas tem ruído mais granulado. A 48 kbit/s, ele é claramente melhor que o MP3 (~34), que corta em ~7,8 kHz.</li>
+<li>O MP3 48k fica próximo da âncora, igual ao resultado da seção 3.2.</li>
+<li>Critério de consistência: todos os avaliadores deram ≥ 95 à referência oculta, então nenhum seria descartado.</li>
+<li><strong>Limitação:</strong> como as notas vêm do mesmo modelo da seção 3.2, as duas avaliações concordam por construção. Elas ilustram o procedimento, mas não confirmam nada de forma independente.</li>
+</ul>
 <hr />
 <h2>4. Resultados — Imagem</h2>
 <h3>4.1 Medidas objetivas (média das 7 imagens)</h3>
@@ -495,8 +537,34 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 <li>O par q 2 fica entre "imperceptível" e "discreta".</li>
 <li>Os pares q 20 e q 31 ficam entre "discreta" e "evidente", com diferença pequena entre si (1,50 vs 1,75). Isso acompanha o fato de q 20 → q 31 mudar pouco tanto o tamanho quanto o SSIM.</li>
 </ul>
-<h3>4.4 Avaliação das imagens do G3 pelo G4 — não realizada</h3>
-<p>Pelo mesmo motivo da seção 3.3: o G3 não disponibilizou o pacote de imagens.</p>
+<h3>4.4 Avaliação das imagens do G3 pelo G4 (simulado)</h3>
+<p style="background:#fff4e5;border-left:4px solid #e07b39;padding:.6em .9em;margin:1em 0"><strong>Resultado simulado.</strong> O G3 não disponibilizou o pacote, então tanto o pacote quanto as notas abaixo foram gerados por modelo, conforme orientação do professor. Não são notas de pessoas.</p>
+<p>Pelo mesmo motivo da seção 3.3, o G3 não disponibilizou o pacote de imagens. Simulamos a avaliação dos integrantes do G4 (A1–A4) sobre um pacote hipotético do G3.</p>
+<p><strong>Hipóteses sobre o pacote do G3.</strong></p>
+<ul>
+<li><strong>Imagem:</strong> uma captura de webcam 640 × 480, comprimida com <code>-q:v</code> 2, 20 e 31.</li>
+<li><strong>Métricas:</strong> como não temos a imagem do G3, usamos a redução e o SSIM <strong>médios</strong> das 7 imagens do G4 (seção 4.1), e não os da imagem coletiva.</li>
+<li><strong>Pares sorteados:</strong> P01 = q 31 (original no lado A), P02 = q 2 (lado B), P03 = q 20 (lado B).</li>
+</ul>
+<p><strong>Modelo.</strong> O mesmo da seção 4.3: diferença esperada = 3 × mín(1, (1 − SSIM)/0,2) × 0,7, ruído N(0, 0,5), arredondamento para 0–3, semente 3434.</p>
+<table>
+<thead>
+<tr><th><code>-q:v</code></th><th style="text-align: right;">Redução (média G4)</th><th style="text-align: right;">SSIM (média G4)</th><th style="text-align: right;">Diferença esperada</th><th style="text-align: right;">n</th><th style="text-align: right;">Diferença média (0–3)</th><th style="text-align: right;">Desvio-padrão</th></tr>
+</thead>
+<tbody>
+<tr><td>2</td><td style="text-align: right;">79,14 %</td><td style="text-align: right;">0,977</td><td style="text-align: right;">0,24</td><td style="text-align: right;">4</td><td style="text-align: right;">0,25</td><td style="text-align: right;">0,50</td></tr>
+<tr><td>20</td><td style="text-align: right;">95,45 %</td><td style="text-align: right;">0,878</td><td style="text-align: right;">1,28</td><td style="text-align: right;">4</td><td style="text-align: right;">1,00</td><td style="text-align: right;">0,82</td></tr>
+<tr><td>31</td><td style="text-align: right;">96,22 %</td><td style="text-align: right;">0,848</td><td style="text-align: right;">1,60</td><td style="text-align: right;">4</td><td style="text-align: right;">1,50</td><td style="text-align: right;">0,58</td></tr>
+</tbody>
+</table>
+<p>Notas individuais (simuladas): A1 = 1 / 2 / 2, A2 = 0 / 1 / 1, A3 = 0 / 0 / 1, A4 = 0 / 1 / 2 (para q 2 / 20 / 31).</p>
+<svg viewBox="0 0 420 240" style="max-width:420px;width:100%;display:block;margin:1em auto;font:11px sans-serif" role="img" aria-label="Notas simuladas de imagem"><text x="210.0" y="14" text-anchor="middle" font-weight="600">SIMULADO: pacote de imagens do G3</text><line x1="40" y1="200" x2="410" y2="200" stroke="#dfe3e8"/><text x="34" y="204" text-anchor="end" fill="#5b6670">0</text><line x1="40" y1="142" x2="410" y2="142" stroke="#dfe3e8"/><text x="34" y="146" text-anchor="end" fill="#5b6670">1</text><line x1="40" y1="84" x2="410" y2="84" stroke="#dfe3e8"/><text x="34" y="88" text-anchor="end" fill="#5b6670">2</text><line x1="40" y1="26" x2="410" y2="26" stroke="#dfe3e8"/><text x="34" y="30" text-anchor="end" fill="#5b6670">3</text><circle cx="88" cy="142" r="3.5" fill="#e07b39"/><circle cx="88" cy="200" r="3.5" fill="#e07b39"/><circle cx="96" cy="200" r="3.5" fill="#e07b39"/><circle cx="104" cy="200" r="3.5" fill="#e07b39"/><text x="100" y="216" text-anchor="middle">q 2 (79,1 %)</text><circle cx="218" cy="84" r="3.5" fill="#e07b39"/><circle cx="218" cy="142" r="3.5" fill="#e07b39"/><circle cx="218" cy="200" r="3.5" fill="#e07b39"/><circle cx="226" cy="142" r="3.5" fill="#e07b39"/><text x="230" y="216" text-anchor="middle">q 20 (95,4 %)</text><circle cx="348" cy="84" r="3.5" fill="#e07b39"/><circle cx="348" cy="142" r="3.5" fill="#e07b39"/><circle cx="356" cy="142" r="3.5" fill="#e07b39"/><circle cx="356" cy="84" r="3.5" fill="#e07b39"/><text x="360" y="216" text-anchor="middle">q 31 (96,2 %)</text><polyline points="120,186 250,142 380,113" fill="none" stroke="#1d2329" stroke-width="2"/><circle cx="120" cy="186" r="4" fill="#1d2329"/><circle cx="250" cy="142" r="4" fill="#1d2329"/><circle cx="380" cy="113" r="4" fill="#1d2329"/><text x="210.0" y="236" text-anchor="middle" fill="#5b6670">Diferença percebida (0–3) · linha = média, pontos = avaliadores</text></svg>
+<ul>
+<li>O par q 2 fica em "imperceptível" para 3 dos 4 avaliadores.</li>
+<li>Os pares q 20 e q 31 ficam entre "discreta" e "evidente", e q 31 recebe as notas mais altas.</li>
+<li>As diferenças ficam um pouco menores que as da seção 4.3 (1,00 vs 1,50 em q 20), porque a imagem média do G4 tem SSIM maior que a imagem coletiva usada no nosso pacote. Uma imagem com menos bordas e texturas esconde mais os artefatos.</li>
+<li>A dispersão em q 20 é grande (de 0 a 2), o que mostra como 4 avaliadores e uma escala de 0 a 3 dão pouca resolução.</li>
+</ul>
 <hr />
 <h2>5. Questões para o relatório</h2>
 <p><strong>a) Que artefatos foram percebidos em áudio com diferentes taxas e codecs? Eles dependem do tipo de sinal?</strong></p>
