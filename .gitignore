@@ -1,0 +1,11 @@
+# Mídia com pessoas identificáveis e gravações não são publicadas
+*.wav
+*.png
+!figuras/*.png
+figuras/imagem_mapa_erro_q31.png
+*.jpg
+*.mp3
+*.m4a
+*.ogg
+gabarito_*_PRIVADO.csv
+__pycache__/
