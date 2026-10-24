@@ -62,11 +62,13 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 </table>
 <p>A sequência seguiu os notebooks Lab4.1 → Lab4.2 → Lab4.3 → Lab4.4 (produtor) → Lab4.5. O gabarito privado do áudio (<code>gabarito_audio_PRIVADO.csv</code>) ficou só com o G4.</p>
 <p>Como o G3 não realizou a avaliação cruzada, as notas subjetivas do pacote do G4 foram obtidas por simulação, conforme orientação do professor. O modelo usado está descrito nas seções 3.2 e 4.3.</p>
-<p>Além das medidas pedidas, calculamos com <code>scripts/analise.py</code>:
-- a largura de banda efetiva, definida como a frequência acima da qual o espectro médio cai 60 dB abaixo do pico;
-- a SNR de forma de onda após o alinhamento temporal;
-- o PSNR e o SSIM das imagens;
-- o erro por tipo de região (blocos 8 × 8).</p>
+<p>Além das medidas pedidas, calculamos com <code>scripts/analise.py</code>:</p>
+<ul>
+<li>a largura de banda efetiva, definida como a frequência acima da qual o espectro médio cai 60 dB abaixo do pico;</li>
+<li>a SNR de forma de onda após o alinhamento temporal;</li>
+<li>o PSNR e o SSIM das imagens;</li>
+<li>o erro por tipo de região (blocos 8 × 8).</li>
+</ul>
 <hr />
 <h2>3. Resultados — Áudio</h2>
 <h3>3.1 Medidas objetivas</h3>
@@ -166,19 +168,23 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 <p><img alt="Tamanho dos arquivos de áudio" src="https://raw.githubusercontent.com/Ogodoy6/esif001-lab4-g4/main/figuras/audio_tamanho.png" /></p>
 <p><img alt="Espectro médio das versões codificadas" src="https://raw.githubusercontent.com/Ogodoy6/esif001-lab4-g4/main/figuras/audio_espectro_medio.png" /></p>
 <p><img alt="Espectrogramas" src="https://raw.githubusercontent.com/Ogodoy6/esif001-lab4-g4/main/figuras/audio_espectrogramas.png" /></p>
-<p><strong>Leitura dos espectrogramas.</strong>
-- A gravação tem ataques regulares de banda larga, com energia até ~20 kHz.
-- No <strong>MP3 48k</strong>, além do corte em 7,8 kHz, aparecem <strong>"buracos" espectrais</strong> entre 3 e 8 kHz: componentes que o codificador zera quando falta bit. Esse efeito costuma ser percebido como som "metálico", "borbulhante" ou "de água" (<em>birdies</em>).
-- O <strong>AAC 48k</strong> tem o mesmo corte, mas preenche a banda abaixo dele de forma mais contínua.
-- O <strong>Vorbis 48k</strong> preserva mais agudos, mas mostra ruído mais "granulado" entre 10 e 14 kHz.
-- A <strong>âncora</strong> (passa-baixas em 3,5 kHz, de rampa suave) remove o brilho e a definição dos ataques.</p>
+<p><strong>Leitura dos espectrogramas.</strong></p>
+<ul>
+<li>A gravação tem ataques regulares de banda larga, com energia até ~20 kHz.</li>
+<li>No <strong>MP3 48k</strong>, além do corte em 7,8 kHz, aparecem <strong>"buracos" espectrais</strong> entre 3 e 8 kHz: componentes que o codificador zera quando falta bit. Esse efeito costuma ser percebido como som "metálico", "borbulhante" ou "de água" (<em>birdies</em>).</li>
+<li>O <strong>AAC 48k</strong> tem o mesmo corte, mas preenche a banda abaixo dele de forma mais contínua.</li>
+<li>O <strong>Vorbis 48k</strong> preserva mais agudos, mas mostra ruído mais "granulado" entre 10 e 14 kHz.</li>
+<li>A <strong>âncora</strong> (passa-baixas em 3,5 kHz, de rampa suave) remove o brilho e a definição dos ataques.</li>
+</ul>
 <h3>3.2 Avaliação MUSHRA-like do pacote do G4</h3>
 <p>O pacote do G4 contém: referência oculta, âncora, MP3 48k, MP3 128k, AAC 48k e Vorbis 128k (gabarito real: S01 = MP3 128k, S02 = âncora, S03 = Vorbis 128k, S04 = MP3 48k, S05 = AAC 48k, S06 = referência oculta).</p>
-<p><strong>Obtenção das notas.</strong> As notas dos avaliadores A1–A4 foram geradas assim:
-- <strong>Nota esperada:</strong> uma reta em função da banda medida de cada versão. A âncora (3,5 kHz) vale 25, e a referência (18,1 kHz) vale 97.
-- <strong>Penalidade:</strong> −10 pontos para o MP3 48k, pelos buracos espectrais vistos no espectrograma.
-- <strong>Variação entre pessoas:</strong> um viés por avaliador, N(0, 5), mais um ruído por nota, N(0, 7), com limite de 0 a 100.
-- <strong>Semente fixa</strong> (2026), para que o resultado possa ser reproduzido.</p>
+<p><strong>Obtenção das notas.</strong> As notas dos avaliadores A1–A4 foram geradas assim:</p>
+<ul>
+<li><strong>Nota esperada:</strong> uma reta em função da banda medida de cada versão. A âncora (3,5 kHz) vale 25, e a referência (18,1 kHz) vale 97.</li>
+<li><strong>Penalidade:</strong> −10 pontos para o MP3 48k, pelos buracos espectrais vistos no espectrograma.</li>
+<li><strong>Variação entre pessoas:</strong> um viés por avaliador, N(0, 5), mais um ruído por nota, N(0, 7), com limite de 0 a 100.</li>
+<li><strong>Semente fixa</strong> (2026), para que o resultado possa ser reproduzido.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -434,18 +440,17 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 </table>
 <ul>
 <li><strong>q 2:</strong> praticamente indistinguível do original nos recortes.</li>
-<li><strong>q 20 e q 31:</strong> surgem três artefatos típicos do JPEG.</li>
-<li><strong>Blocagem 8 × 8</strong> em regiões de gradiente suave, como a camiseta laranja, onde a variação lenta de tom vira um mosaico de blocos.</li>
-<li><strong><em>Ringing</em>/mosquito</strong> em torno de bordas de alto contraste, como as letras do livro "OpenGL" e o contorno do olho da pelúcia.</li>
-<li><strong>Perda de detalhe fino e de cor:</strong> texto ilegível em q 31. Cores saturadas "vazam" para fora dos contornos por causa da subamostragem de crominância 4:2:0.</li>
+<li><strong>q 20 e q 31:</strong> surgem três artefatos típicos do JPEG.<ol><li><strong>Blocagem 8 × 8</strong> em regiões de gradiente suave, como a camiseta laranja, onde a variação lenta de tom vira um mosaico de blocos.</li><li><strong><em>Ringing</em>/mosquito</strong> em torno de bordas de alto contraste, como as letras do livro "OpenGL" e o contorno do olho da pelúcia.</li><li><strong>Perda de detalhe fino e de cor:</strong> texto ilegível em q 31. Cores saturadas "vazam" para fora dos contornos por causa da subamostragem de crominância 4:2:0.</li></ol></li>
 <li><strong>Medida e percepção divergem nas áreas lisas.</strong> Em números, o maior erro está nas texturas e bordas. Mas a blocagem nas áreas lisas é muito visível, mesmo com erro numérico pequeno, porque o olho percebe facilmente uma descontinuidade num fundo homogêneo. Já nas texturas, o próprio conteúdo <strong>mascara</strong> boa parte do erro.</li>
 </ul>
 <h3>4.3 Avaliação por pares do pacote do G4</h3>
-<p><strong>Obtenção das notas.</strong> Para a imagem <code>G4_1792112691.png</code>, a diferença esperada foi calculada a partir do SSIM medido:
-- <strong>Diferença esperada:</strong> 3 × mín(1, (1 − SSIM)/0,2) × 0,7.
-- <strong>Por que o fator 0,7:</strong> os pares aparecem reduzidos a ~360 px no Colab, o que esconde parte dos artefatos.
-- <strong>Variação:</strong> ruído N(0, 0,5), com arredondamento para 0–3.
-- <strong>Avaliadores e semente:</strong> 4 avaliadores (A1–A4), semente 2026.</p>
+<p><strong>Obtenção das notas.</strong> Para a imagem <code>G4_1792112691.png</code>, a diferença esperada foi calculada a partir do SSIM medido:</p>
+<ul>
+<li><strong>Diferença esperada:</strong> 3 × mín(1, (1 − SSIM)/0,2) × 0,7.</li>
+<li><strong>Por que o fator 0,7:</strong> os pares aparecem reduzidos a ~360 px no Colab, o que esconde parte dos artefatos.</li>
+<li><strong>Variação:</strong> ruído N(0, 0,5), com arredondamento para 0–3.</li>
+<li><strong>Avaliadores e semente:</strong> 4 avaliadores (A1–A4), semente 2026.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -495,16 +500,20 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 <hr />
 <h2>5. Questões para o relatório</h2>
 <p><strong>a) Que artefatos foram percebidos em áudio com diferentes taxas e codecs? Eles dependem do tipo de sinal?</strong></p>
-<p><em>Evidência objetiva (G4):</em>
-- A 48 kbit/s, MP3 e AAC removem tudo acima de ~7,7 kHz. O resultado esperado é som "abafado", com ataques menos definidos.
-- O MP3 48k também mostra buracos espectrais variando no tempo, associados a artefatos "metálicos" ou "borbulhantes".
-- O Vorbis 48k mantém mais agudos (até ~14 kHz), mas com textura de ruído mais grossa.
-- A 128 kbit/s, os três codecs preservam a banda até 16–18 kHz, e não se espera diferença clara em escuta casual.</p>
+<p><em>Evidência objetiva (G4):</em></p>
+<ul>
+<li>A 48 kbit/s, MP3 e AAC removem tudo acima de ~7,7 kHz. O resultado esperado é som "abafado", com ataques menos definidos.</li>
+<li>O MP3 48k também mostra buracos espectrais variando no tempo, associados a artefatos "metálicos" ou "borbulhantes".</li>
+<li>O Vorbis 48k mantém mais agudos (até ~14 kHz), mas com textura de ruído mais grossa.</li>
+<li>A 128 kbit/s, os três codecs preservam a banda até 16–18 kHz, e não se espera diferença clara em escuta casual.</li>
+</ul>
 <p><em>Avaliação:</em> as notas reproduzem esse quadro. As versões de 128 kbit/s ficam a 1–8 pontos da referência oculta, e as de 48 kbit/s caem 50 a 60 pontos, com o MP3 48k abaixo do AAC 48k.</p>
-<p>Sobre a dependência do tipo de sinal:
-- Sinais com transientes fortes, como os ataques desta gravação, percussão ou consoantes plosivas, são os mais sensíveis ao <strong>pré-eco</strong>: ruído espalhado antes do ataque dentro de um quadro de transformada.
-- Sinais com muita energia em agudos, como sibilantes, pratos e aplausos, sofrem mais com o corte de banda.
-- A fala tem a maior parte da energia abaixo de 4 kHz e tolera melhor 48 kbit/s. Música e canto, com mais harmônicos e banda larga, revelam os artefatos mais cedo.</p>
+<p>Sobre a dependência do tipo de sinal:</p>
+<ul>
+<li>Sinais com transientes fortes, como os ataques desta gravação, percussão ou consoantes plosivas, são os mais sensíveis ao <strong>pré-eco</strong>: ruído espalhado antes do ataque dentro de um quadro de transformada.</li>
+<li>Sinais com muita energia em agudos, como sibilantes, pratos e aplausos, sofrem mais com o corte de banda.</li>
+<li>A fala tem a maior parte da energia abaixo de 4 kHz e tolera melhor 48 kbit/s. Música e canto, com mais harmônicos e banda larga, revelam os artefatos mais cedo.</li>
+</ul>
 <p><strong>b) Em quais regiões das imagens aparecem diferenças mais evidentes: texturas, bordas ou áreas uniformes?</strong></p>
 <ul>
 <li><strong>Bordas de alto contraste</strong> (texto, contornos do olho da pelúcia, armação dos óculos) mostram <em>ringing</em> e perda de nitidez. É onde o erro numérico é maior: RMSE de 13,5 em q 31.</li>
@@ -514,13 +523,17 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 </ul>
 <p>Pela análise dos recortes, os primeiros pontos onde um observador notaria a diferença em q 20/31 são o texto do livro e as transições de tom na camiseta e na pele.</p>
 <p><strong>c) Como a redução percentual de dados se relaciona com as notas de qualidade percebida?</strong></p>
-<p>A relação <strong>não é linear</strong>.
-- <strong>Imagem:</strong> de q 2 para q 20, a redução sobe de 77 % para 95 % e o PSNR cai ~11 dB. De q 20 para q 31, a redução praticamente não muda (+0,8 pp), mas a qualidade continua caindo.
-- <strong>Áudio:</strong> as versões de 48 kbit/s economizam só ~5,7 pp a mais que as de 128 kbit/s (96,5 % vs 90,9 %), mas perdem metade da banda de frequências.</p>
+<p>A relação <strong>não é linear</strong>.</p>
+<ul>
+<li><strong>Imagem:</strong> de q 2 para q 20, a redução sobe de 77 % para 95 % e o PSNR cai ~11 dB. De q 20 para q 31, a redução praticamente não muda (+0,8 pp), mas a qualidade continua caindo.</li>
+<li><strong>Áudio:</strong> as versões de 48 kbit/s economizam só ~5,7 pp a mais que as de 128 kbit/s (96,5 % vs 90,9 %), mas perdem metade da banda de frequências.</li>
+</ul>
 <p>Ou seja, os últimos pontos percentuais de redução são os que mais custam em qualidade. Além disso, para o <strong>mesmo</strong> tamanho, o resultado depende do codec, como se vê comparando Vorbis e MP3 a 48 kbit/s.</p>
-<p>Com as notas, o padrão é o mesmo:
-- <strong>Imagem:</strong> a diferença percebida sobe de 0,50 (q 2, 77 % de redução) para 1,50 (q 20, 95 %) e 1,75 (q 31, 96 %). Quase toda a perda percebida acontece quando a redução passa de ~77 % para ~95 %.
-- <strong>Áudio:</strong> a 128 kbit/s (~91 % de redução), as notas ficam em 86–93. A 48 kbit/s (~96,5 %), caem para 36–42. Ou seja, ~5,5 pp a mais de redução custam ~50 pontos na escala.</p>
+<p>Com as notas, o padrão é o mesmo:</p>
+<ul>
+<li><strong>Imagem:</strong> a diferença percebida sobe de 0,50 (q 2, 77 % de redução) para 1,50 (q 20, 95 %) e 1,75 (q 31, 96 %). Quase toda a perda percebida acontece quando a redução passa de ~77 % para ~95 %.</li>
+<li><strong>Áudio:</strong> a 128 kbit/s (~91 % de redução), as notas ficam em 86–93. A 48 kbit/s (~96,5 %), caem para 36–42. Ou seja, ~5,5 pp a mais de redução custam ~50 pontos na escala.</li>
+</ul>
 <p><strong>d) Quais limitações decorrem do número de avaliadores, das condições de reprodução e da escala didática?</strong></p>
 <ul>
 <li><strong>Notas obtidas por modelo.</strong> Sem a participação do G3, as notas derivam das medidas objetivas e não trazem informação perceptiva independente.</li>
@@ -540,9 +553,11 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 <li><strong>Avaliação:</strong> 128 kbit/s em qualquer dos três codecs e <code>-q:v 2</code> no JPEG seriam aceitáveis, com notas próximas da referência ou diferença entre imperceptível e discreta. 48 kbit/s e <code>-q:v</code> ≥ 20 já degradariam a qualidade de forma perceptível.</li>
 </ul>
 <h2>7. Arquivos</h2>
-<p>O repositório GitHub contém:
-- os notebooks;
-- as tabelas CSV de medidas, métricas e notas;
-- o script <code>scripts/analise.py</code>, que gera as figuras.</p>
+<p>O repositório GitHub contém:</p>
+<ul>
+<li>os notebooks;</li>
+<li>as tabelas CSV de medidas, métricas e notas;</li>
+<li>o script <code>scripts/analise.py</code>, que gera as figuras.</li>
+</ul>
 <p>Por privacidade, as fotografias originais (com rostos dos integrantes) e as gravações <strong>não</strong> são publicadas no repositório. Elas permanecem no Drive da disciplina.</p>
 </main></body></html>
