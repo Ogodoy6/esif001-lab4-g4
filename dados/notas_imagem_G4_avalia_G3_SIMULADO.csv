@@ -1,0 +1,13 @@
+grupo_avaliador,grupo_produtor,avaliador,imagem_original,par,diferenca_0_3,q_ffmpeg,original_lado,reducao_pct_aprox,ssim_aprox,nota_esperada_modelo,origem
+G4,G3,A1,G3_hipotetica.png,P01,2,31,A,96.22,0.848,1.6,SIMULADO
+G4,G3,A1,G3_hipotetica.png,P02,1,2,B,79.14,0.977,0.24,SIMULADO
+G4,G3,A1,G3_hipotetica.png,P03,2,20,B,95.45,0.878,1.28,SIMULADO
+G4,G3,A2,G3_hipotetica.png,P01,1,31,A,96.22,0.848,1.6,SIMULADO
+G4,G3,A2,G3_hipotetica.png,P02,0,2,B,79.14,0.977,0.24,SIMULADO
+G4,G3,A2,G3_hipotetica.png,P03,1,20,B,95.45,0.878,1.28,SIMULADO
+G4,G3,A3,G3_hipotetica.png,P01,1,31,A,96.22,0.848,1.6,SIMULADO
+G4,G3,A3,G3_hipotetica.png,P02,0,2,B,79.14,0.977,0.24,SIMULADO
+G4,G3,A3,G3_hipotetica.png,P03,0,20,B,95.45,0.878,1.28,SIMULADO
+G4,G3,A4,G3_hipotetica.png,P01,2,31,A,96.22,0.848,1.6,SIMULADO
+G4,G3,A4,G3_hipotetica.png,P02,0,2,B,79.14,0.977,0.24,SIMULADO
+G4,G3,A4,G3_hipotetica.png,P03,1,20,B,95.45,0.878,1.28,SIMULADO
