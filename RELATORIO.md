@@ -1,6 +1,8 @@
 # Lab 4: Codificação com Perdas de Áudio e Imagem (Grupo G4)
 
-**ESIF001, profs. Celso e Minami.** Atividade realizada em 15/10/2026. Grupo parceiro: **G3** (trocas G3 ↔ G4).
+**ESIF001** — Professor: Celso S Kurashima, E-mail: celso.kurashima@ufabc.edu.br
+
+Atividade realizada em 15/10/2026. Grupo parceiro: **G3** (trocas G3 ↔ G4).
 
 ---
 
