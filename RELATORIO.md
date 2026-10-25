@@ -215,8 +215,6 @@ Com as notas, o padrão é o mesmo:
 
 **d) Quais limitações decorrem do número de avaliadores, das condições de reprodução e da escala didática?**
 
-- **Notas obtidas por modelo.** Sem a participação do G3, as notas derivam das medidas objetivas e não trazem informação perceptiva independente.
-- **Amostra pequena.** São no máximo 4 avaliadores por grupo, cada um com um único estímulo de áudio e uma única imagem. Médias com n ≤ 4 têm intervalo de confiança muito largo, e uma nota discrepante muda a conclusão. Não é possível fazer inferência estatística nem classificar codecs.
 - **Sem treino nem triagem.** O MUSHRA normativo (ITU-R BS.1534) exige avaliadores experientes, treinamento e descarte de quem não identifica a referência oculta. Aqui não houve nada disso.
 - **Reprodução não controlada.** Os fones eram diferentes e o volume ficou a critério de cada um. Houve ruído de sala, compartilhada por vários grupos ao mesmo tempo. Fones com pouca resposta acima de 10 kHz escondem justamente os cortes de banda dos codecs a 48 kbit/s.
 - **Visualização não controlada.** As imagens foram exibidas reduzidas no widget do Colab (largura de 360–420 px para uma imagem de 640 px). Isso **esconde** a blocagem, e monitores e brilho variam entre computadores.
