@@ -41,7 +41,7 @@ scripts/     analise.py (métricas e figuras); simular_avaliacao_G3.py; gerar_no
 
 ## Privacidade
 
-As fotografias mostram integrantes da turma, e as gravações são de voz/sala. Por isso, **não** estão neste repositório público, conforme o item 9e do roteiro. Elas permanecem no Google Drive da disciplina. As figuras publicadas são apenas recortes sem rostos (livro, camiseta, pelúcia) e gráficos. Os gabaritos privados também ficam fora do repositório até o encerramento das avaliações.
+As gravações são de voz/sala e, assim como as fotografias originais em resolução completa, **não** estão neste repositório público (item 9e do roteiro). Elas permanecem no Google Drive da disciplina. Das fotos, o repositório traz apenas um mosaico reduzido das capturas com os integrantes (`figuras/fotos_capturas_G4.webp`), publicado com autorização do grupo, além de recortes sem rostos e gráficos. Os gabaritos privados também ficam fora do repositório até o encerramento das avaliações.
 
 ## Avaliação subjetiva
 
