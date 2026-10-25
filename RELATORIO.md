@@ -2,13 +2,13 @@
 
 **ESIF001** — Professor: Celso S Kurashima, E-mail: celso.kurashima@ufabc.edu.br
 
-Atividade realizada em 15/10/2026. Grupo parceiro: **G3** (trocas G3 ↔ G4).
+Atividade realizada em 15/10/2026.
 
 ---
 
 ## 1. Objetivo
 
-Verificar até que ponto é possível reduzir a quantidade de dados de áudio e imagem mantendo uma qualidade perceptiva adequada. O trabalho compara medidas objetivas (tamanho, bitrate, redução percentual, largura de banda, PSNR/SSIM) com julgamentos perceptivos de avaliadores externos (grupo G3).
+Verificar até que ponto é possível reduzir a quantidade de dados de áudio e imagem mantendo uma qualidade perceptiva adequada. O trabalho analisa medidas objetivas (tamanho, bitrate, redução percentual, largura de banda, PSNR/SSIM).
 
 ## 2. Materiais e procedimento
 
