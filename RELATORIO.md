@@ -29,7 +29,7 @@ Verificar até que ponto é possível reduzir a quantidade de dados de áudio e 
 
 A sequência seguiu os notebooks Lab4.1 → Lab4.2 → Lab4.3 → Lab4.4 (produtor) → Lab4.5. O gabarito privado do áudio (`gabarito_audio_PRIVADO.csv`) ficou só com o G4.
 
-Como o G3 não realizou a avaliação cruzada, as notas subjetivas do pacote do G4 foram obtidas por simulação, conforme orientação do professor. O modelo usado está descrito nas seções 3.2 e 4.3.
+As notas subjetivas do pacote do G4 foram obtidas por simulação, conforme orientação do professor. O modelo usado está descrito nas seções 3.2 e 4.3.
 
 Além das medidas pedidas, calculamos com `scripts/analise.py`:
 - a largura de banda efetiva, definida como a frequência acima da qual o espectro médio cai 60 dB abaixo do pico;
