@@ -240,5 +240,3 @@ O repositório GitHub contém:
 - os notebooks;
 - as tabelas CSV de medidas, métricas e notas;
 - o script `scripts/analise.py`, que gera as figuras.
-
-As gravações e as fotografias originais em resolução completa **não** são publicadas no repositório e permanecem no Drive da disciplina. O repositório traz apenas o mosaico reduzido das capturas (`figuras/fotos_capturas_G4.webp`), publicado com autorização do grupo.
