@@ -555,4 +555,53 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 <li>as tabelas CSV de medidas, métricas e notas;</li>
 <li>o script <code>scripts/analise.py</code>, que gera as figuras.</li>
 </ul>
+<hr />
+<h2>8. Atividade extensionista</h2>
+<p>O Lab 4 é a preparação para duas atividades extensionistas: um teste MUSHRA-like de áudio e um teste de degradação de imagem, aplicados a pessoas de fora do grupo. Pelo roteiro da disciplina, 16 participantes fazendo os dois testes equivalem a <strong>2 h</strong> de extensão, e 32 participantes (16 em cada teste) equivalem a <strong>4 h</strong>.</p>
+<p><strong>Situação:</strong> planejada, ainda não realizada. Os resultados serão incluídos nesta seção depois das sessões.</p>
+<h3>8.1 Objetivo</h3>
+<ul>
+<li>Mostrar ao público, na prática, como a compressão com perdas afeta a qualidade percebida de áudio e imagem.</li>
+<li>Obter julgamentos de avaliadores reais e independentes, que substituem as notas simuladas das seções 3.2 e 4.3.</li>
+</ul>
+<h3>8.2 Material</h3>
+<table>
+<thead><tr><th>Teste</th><th>Estímulos</th><th>Escala</th></tr></thead>
+<tbody>
+<tr><td>Áudio (MUSHRA-like)</td><td>Pacote do G4: referência identificada + 6 estímulos anônimos (referência oculta, âncora, MP3 48k, MP3 128k, AAC 48k e Vorbis 128k)</td><td>0 a 100 por estímulo</td></tr>
+<tr><td>Imagem (pares)</td><td>3 pares original × JPEG (<code>-q:v</code> 2, 20 e 31) da foto coletiva <code>G4_1792112691.png</code>, com lado e ordem sorteados</td><td>0 a 3 (diferença percebida)</td></tr>
+<tr><td>Equipamento</td><td colspan="2">Um notebook com os notebooks Lab4.4 e Lab4.5 adaptados para códigos P01–P32, um fone de ouvido e o mesmo volume e brilho de tela para todos</td></tr>
+</tbody>
+</table>
+<h3>8.3 Protocolo por participante (cerca de 12–15 min)</h3>
+<ol>
+<li><strong>Acolhida:</strong> explicação da tarefa em 1 minuto, assinatura da lista de presença e do termo de consentimento, se exigido.</li>
+<li><strong>Código anônimo:</strong> o participante recebe um código (P01, P02…). O nome aparece só na lista de presença, nunca nos dados.</li>
+<li><strong>Teste de áudio:</strong> ouve a referência e dá uma nota de 0 a 100 para cada um dos 6 estímulos, podendo repetir à vontade.</li>
+<li><strong>Teste de imagem:</strong> compara os 3 pares e indica a diferença percebida (0 = imperceptível, 1 = discreta, 2 = evidente, 3 = muito evidente).</li>
+<li><strong>Registro:</strong> o notebook grava um CSV de áudio e um de imagem com o código do participante.</li>
+</ol>
+<p>Exemplo do formato gravado (valores ilustrativos):</p>
+<pre style="background:#f6f8fa;padding:.8em;border-radius:6px;overflow-x:auto;font-size:.85em">avaliador,estimulo,nota_0_100
+P07,S01.wav,85
+P07,S02.wav,20
+...
+avaliador,par,diferenca_0_3
+P07,P01,2
+P07,P02,0</pre>
+<h3>8.4 Organização</h3>
+<ul>
+<li><strong>Meta:</strong> 16 participantes fazendo os dois testes (2 h) ou 32 participantes, 16 em cada teste (4 h).</li>
+<li><strong>Divisão:</strong> cada integrante do G4 recruta e acompanha 4 participantes (ou 8, na meta de 4 h).</li>
+<li><strong>Local:</strong> sala silenciosa, com duas pessoas aplicando ao mesmo tempo. As 16 sessões cabem em uma tarde.</li>
+</ul>
+<h3>8.5 Registro e evidências</h3>
+<ul>
+<li>CSVs de áudio e de imagem de cada participante.</li>
+<li>Lista de presença com data, horário, código e assinatura.</li>
+<li>Termos de consentimento, quando exigidos.</li>
+</ul>
+<p>Tudo fica na pasta <code>MyDrive/Lab4_CSM/G4/extensao/</code>. Os nomes dos participantes não são publicados.</p>
+<h3>8.6 Resultados</h3>
+<p><em>A preencher após as sessões:</em> número de participantes, notas médias e dispersão por condição de áudio e por nível JPEG, e comparação com as medidas objetivas (banda, PSNR e SSIM) e com as notas simuladas das seções 3.2 e 4.3.</p>
 </main></body></html>
