@@ -21,6 +21,10 @@ Verificar até que ponto é possível reduzir a quantidade de dados de áudio e 
 | Avaliação de áudio (Lab4.4) | Pacote anônimo com 6 estímulos: referência oculta, âncora (passa-baixas 3,5 kHz), MP3 48k, MP3 128k, AAC 48k e Vorbis 128k. Escala de 0 a 100. |
 | Avaliação de imagem (Lab4.5) | 3 pares original × JPEG (q 2, 20 e 31) da imagem `G4_1792112691.png` (composição coletiva). Diferença percebida de 0 a 3. |
 
+![Integrantes do G4 nas 7 capturas de webcam](figuras/fotos_capturas_G4.webp)
+
+*Integrantes do G4 nas 7 capturas de webcam (640 × 480) feitas no Lab4.2. A última (`G4_1792112691.png`, composição coletiva) foi a imagem usada na avaliação por pares.*
+
 A sequência seguiu os notebooks Lab4.1 → Lab4.2 → Lab4.3 → Lab4.4 (produtor) → Lab4.5. O gabarito privado do áudio (`gabarito_audio_PRIVADO.csv`) ficou só com o G4.
 
 Como o G3 não realizou a avaliação cruzada, as notas subjetivas do pacote do G4 foram obtidas por simulação, conforme orientação do professor. O modelo usado está descrito nas seções 3.2 e 4.3.
@@ -237,4 +241,4 @@ O repositório GitHub contém:
 - as tabelas CSV de medidas, métricas e notas;
 - o script `scripts/analise.py`, que gera as figuras.
 
-Por privacidade, as fotografias originais (com rostos dos integrantes) e as gravações **não** são publicadas no repositório. Elas permanecem no Drive da disciplina.
+As gravações e as fotografias originais em resolução completa **não** são publicadas no repositório e permanecem no Drive da disciplina. O repositório traz apenas o mosaico reduzido das capturas (`figuras/fotos_capturas_G4.webp`), publicado com autorização do grupo.
