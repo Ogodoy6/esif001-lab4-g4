@@ -1,6 +1,6 @@
 # ESIF001 — Lab 4: Codificação com Perdas de Áudio e Imagem (G4)
 
-Codificação de áudio (MP3, AAC e Ogg Vorbis, a 48 e 128 kbit/s) e de imagem (JPEG com `-q:v` 2, 20 e 31), com medidas objetivas e avaliação perceptiva cruzada com o grupo G3.
+Codificação de áudio (MP3, AAC e Ogg Vorbis, a 48 e 128 kbit/s) e de imagem (JPEG com `-q:v` 2, 20 e 31), com medidas objetivas e avaliação perceptiva.
 
 📄 **Relatório completo:** [RELATORIO.md](RELATORIO.md)
 
@@ -20,13 +20,13 @@ Codificação de áudio (MP3, AAC e Ogg Vorbis, a 48 e 128 kbit/s) e de imagem (
 ## Estrutura
 
 ```
-notebooks/   Lab4.1 a Lab4.5 (configurados para o G4) e Lab4.6 (finalização das avaliações G3↔G4)
+notebooks/   Lab4.1 a Lab4.5 (configurados para o G4)
 dados/       medidas_audio.csv, medidas_imagem.csv (gerados nos notebooks)
              metricas_audio.csv, metricas_imagem.csv, resumo_metricas_imagem.csv,
              erro_por_regiao_*.csv (gerados por scripts/analise.py)
              notas_*_completas.csv, resumo_audio.csv, resumo_imagem.csv (notas da avaliação)
 figuras/     espectros, espectrogramas, tamanho x taxa, redução/PSNR, recortes de artefatos JPEG
-scripts/     analise.py (métricas e figuras); simular_avaliacao_G3.py; gerar_notebook_finalizacao.py
+scripts/     analise.py (métricas e figuras); simular_avaliacao.py (notas simuladas)
 ```
 
 ## Como reproduzir
@@ -37,7 +37,7 @@ scripts/     analise.py (métricas e figuras); simular_avaliacao_G3.py; gerar_no
    pip install -r requirements.txt   # requer também o FFmpeg no PATH
    python scripts/analise.py --midia caminho/para/G4
    ```
-3. Depois das avaliações, copie para `dados/` os CSVs gerados pela seção 4 do Lab4.6. Rode `python scripts/analise.py` de novo para gerar `figuras/notas_*.png`.
+3. Rode `python scripts/simular_avaliacao.py` para gerar as notas simuladas e depois `python scripts/analise.py` de novo para gerar `figuras/notas_*.png`.
 
 ## Privacidade
 
@@ -45,4 +45,4 @@ As gravações são de voz/sala e, assim como as fotografias originais em resolu
 
 ## Avaliação subjetiva
 
-Como o G3 não realizou a avaliação cruzada, as notas foram obtidas por simulação (`scripts/simular_avaliacao_G3.py`), conforme orientação do professor.
+As notas subjetivas foram obtidas por simulação (`scripts/simular_avaliacao.py`), conforme orientação do professor.
