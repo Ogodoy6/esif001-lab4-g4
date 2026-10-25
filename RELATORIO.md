@@ -23,7 +23,7 @@ Verificar até que ponto é possível reduzir a quantidade de dados de áudio e 
 
 A sequência seguiu os notebooks Lab4.1 → Lab4.2 → Lab4.3 → Lab4.4 (produtor) → Lab4.5. O gabarito privado do áudio (`gabarito_audio_PRIVADO.csv`) ficou só com o G4.
 
-Como o G3 não realizou a avaliação cruzada, as notas subjetivas do pacote do G4 foram obtidas por simulação, conforme orientação do professor. O modelo usado está descrito nas seções 3.2 e 4.3. As seções 3.3 e 4.4 simulam também a avaliação, pelo G4, de um pacote hipotético do G3.
+Como o G3 não realizou a avaliação cruzada, as notas subjetivas do pacote do G4 foram obtidas por simulação, conforme orientação do professor. O modelo usado está descrito nas seções 3.2 e 4.3.
 
 Além das medidas pedidas, calculamos com `scripts/analise.py`:
 - a largura de banda efetiva, definida como a frequência acima da qual o espectro médio cai 60 dB abaixo do pico;
@@ -101,44 +101,6 @@ Notas individuais:
 - O MP3 48k tem a maior dispersão: um avaliador (A4) foi mais tolerante e outro (A3) mais rigoroso. Isso costuma acontecer com artefatos "metálicos", que alguns ouvintes notam muito e outros quase nada.
 - Critério de consistência: todos os avaliadores deram ≥ 90 à referência oculta, então nenhum seria descartado.
 
-### 3.3 Avaliação do pacote do G3 pelo G4 (simulado)
-
-> **Resultado simulado.** O G3 não disponibilizou o pacote, então tanto o pacote quanto as notas abaixo foram gerados por modelo (`scripts/simular_avaliacao_G4_sobre_G3.py`), conforme orientação do professor. Não são notas de pessoas.
-
-O G3 não disponibilizou o pacote de áudio (`G3/pacote_audio`). Para completar a avaliação cruzada, simulamos o que os integrantes do G4 (A1–A4) teriam respondido a um pacote hipotético do G3.
-
-**Hipóteses sobre o pacote do G3.**
-- **Estrutura:** a do roteiro, com referência oculta, âncora (passa-baixas 3,5 kHz) e quatro versões codificadas.
-- **Versões escolhidas:** AAC 128k, Vorbis 128k, Vorbis 48k e MP3 48k. É uma combinação diferente da do G4 e cobre os três codecs.
-- **Banda de cada versão:** como não temos os arquivos do G3, usamos a banda medida nas versões do G4 com os mesmos codecs e taxas.
-- **Gabarito sorteado:** S01 = Vorbis 48k, S02 = âncora, S03 = AAC 128k, S04 = MP3 48k, S05 = Vorbis 128k, S06 = referência oculta.
-
-**Modelo.** O mesmo da seção 3.2: nota esperada pela reta da banda (âncora = 25, referência = 97), penalidade de −10 para MP3 48k (buracos espectrais) e também para Vorbis 48k (ruído granulado entre 10 e 14 kHz), viés por avaliador N(0, 5) e ruído N(0, 7), limitado a 0–100. Semente 3434, diferente da usada na seção 3.2.
-
-| Condição | Banda (kHz) | Nota esperada | n | Média | Desvio-padrão | Mín–Máx |
-|---|---:|---:|---:|---:|---:|---:|
-| Referência oculta | 18,1 | 97,0 | 4 | 98,8 | 2,5 | 95–100 |
-| Vorbis 128k | 17,9 | 96,0 | 4 | 94,8 | 6,2 | 88–100 |
-| AAC 128k | 17,2 | 92,6 | 4 | 93,2 | 10,3 | 78–100 |
-| Vorbis 48k | 14,1 | 67,3 | 4 | 67,2 | 8,4 | 55–74 |
-| MP3 48k | 7,8 | 36,2 | 4 | 34,2 | 7,2 | 28–41 |
-| Âncora (LP 3,5 kHz) | 3,5 | 25,0 | 4 | 28,5 | 8,3 | 21–38 |
-
-Notas individuais (simuladas):
-
-| Avaliador (G4) | Ref. oculta | Vorbis 128k | AAC 128k | Vorbis 48k | MP3 48k | Âncora |
-|---|---:|---:|---:|---:|---:|---:|
-| A1 | 100 | 100 | 99 | 69 | 41 | 38 |
-| A2 | 95 | 88 | 78 | 55 | 28 | 21 |
-| A3 | 100 | 91 | 100 | 74 | 28 | 22 |
-| A4 | 100 | 100 | 96 | 71 | 40 | 33 |
-
-- As versões de 128 kbit/s (AAC e Vorbis) ficam junto da referência oculta, como no pacote do G4.
-- O **Vorbis 48k**, que não existia no pacote do G4, fica numa faixa intermediária (~67). Ele mantém banda até ~14 kHz, mas tem ruído mais granulado. A 48 kbit/s, ele é claramente melhor que o MP3 (~34), que corta em ~7,8 kHz.
-- O MP3 48k fica próximo da âncora, igual ao resultado da seção 3.2.
-- Critério de consistência: todos os avaliadores deram ≥ 95 à referência oculta, então nenhum seria descartado.
-- **Limitação:** como as notas vêm do mesmo modelo da seção 3.2, as duas avaliações concordam por construção. Elas ilustram o procedimento, mas não confirmam nada de forma independente.
-
 ---
 
 ## 4. Resultados — Imagem
@@ -210,32 +172,6 @@ Notas individuais: A1 = 1 / 2 / 2, A2 = 1 / 1 / 1, A3 = 0 / 2 / 2, A4 = 0 / 1 / 
 
 - O par q 2 fica entre "imperceptível" e "discreta".
 - Os pares q 20 e q 31 ficam entre "discreta" e "evidente", com diferença pequena entre si (1,50 vs 1,75). Isso acompanha o fato de q 20 → q 31 mudar pouco tanto o tamanho quanto o SSIM.
-
-### 4.4 Avaliação das imagens do G3 pelo G4 (simulado)
-
-> **Resultado simulado.** O G3 não disponibilizou o pacote, então tanto o pacote quanto as notas abaixo foram gerados por modelo (`scripts/simular_avaliacao_G4_sobre_G3.py`), conforme orientação do professor. Não são notas de pessoas.
-
-Pelo mesmo motivo da seção 3.3, o G3 não disponibilizou o pacote de imagens. Simulamos a avaliação dos integrantes do G4 (A1–A4) sobre um pacote hipotético do G3.
-
-**Hipóteses sobre o pacote do G3.**
-- **Imagem:** uma captura de webcam 640 × 480, comprimida com `-q:v` 2, 20 e 31.
-- **Métricas:** como não temos a imagem do G3, usamos a redução e o SSIM **médios** das 7 imagens do G4 (seção 4.1), e não os da imagem coletiva.
-- **Pares sorteados:** P01 = q 31 (original no lado A), P02 = q 2 (lado B), P03 = q 20 (lado B).
-
-**Modelo.** O mesmo da seção 4.3: diferença esperada = 3 × mín(1, (1 − SSIM)/0,2) × 0,7, ruído N(0, 0,5), arredondamento para 0–3, semente 3434.
-
-| `-q:v` | Redução (média G4) | SSIM (média G4) | Diferença esperada | n | Diferença média (0–3) | Desvio-padrão |
-|---:|---:|---:|---:|---:|---:|---:|
-| 2 | 79,14 % | 0,977 | 0,24 | 4 | 0,25 | 0,50 |
-| 20 | 95,45 % | 0,878 | 1,28 | 4 | 1,00 | 0,82 |
-| 31 | 96,22 % | 0,848 | 1,60 | 4 | 1,50 | 0,58 |
-
-Notas individuais (simuladas): A1 = 1 / 2 / 2, A2 = 0 / 1 / 1, A3 = 0 / 0 / 1, A4 = 0 / 1 / 2 (para q 2 / 20 / 31).
-
-- O par q 2 fica em "imperceptível" para 3 dos 4 avaliadores.
-- Os pares q 20 e q 31 ficam entre "discreta" e "evidente", e q 31 recebe as notas mais altas.
-- As diferenças ficam um pouco menores que as da seção 4.3 (1,00 vs 1,50 em q 20), porque a imagem média do G4 tem SSIM maior que a imagem coletiva usada no nosso pacote. Uma imagem com menos bordas e texturas esconde mais os artefatos.
-- A dispersão em q 20 é grande (de 0 a 2), o que mostra como 4 avaliadores e uma escala de 0 a 3 dão pouca resolução.
 
 ---
 
