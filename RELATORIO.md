@@ -298,6 +298,10 @@ E07,P02,0
 
 Tudo fica na pasta `MyDrive/Lab4_CSM/G4/extensao/`. Os nomes dos participantes não são publicados.
 
+Registro fotográfico das sessões (16 participantes). As fotos não estão associadas aos códigos nem às notas.
+
+![Registro das sessões da atividade extensionista](figuras/extensao_sessoes.webp)
+
 ### 8.6 Resultados (16 participantes)
 
 Sessões realizadas até 29/10/2026 com 16 participantes (E01–E16), cada um fazendo os dois testes com o pacote de áudio e os pares de imagem do G4, no próprio computador ou no disponível no local, com fone de ouvido. Os dados estão em `dados/extensao_notas_audio.csv` e `dados/extensao_notas_imagem.csv`.
