@@ -40,10 +40,6 @@ scripts/     analise.py (métricas e figuras); simular_avaliacao.py (notas simul
    ```
 3. Rode `python scripts/simular_avaliacao.py` para gerar as notas simuladas e depois `python scripts/analise.py` de novo para gerar `figuras/notas_*.png`.
 
-## Privacidade
-
-As gravações são de voz/sala e, assim como as fotografias originais em resolução completa, **não** estão neste repositório público (item 9e do roteiro). Elas permanecem no Google Drive da disciplina. Das fotos, o repositório traz apenas um mosaico reduzido das capturas com os integrantes (`figuras/fotos_capturas_G4.webp`), publicado com autorização do grupo, além de recortes sem rostos e gráficos. Os gabaritos privados também ficam fora do repositório até o encerramento das avaliações.
-
 ## Avaliação subjetiva
 
 As notas subjetivas foram obtidas por simulação (`scripts/simular_avaliacao.py`), conforme orientação do professor.
