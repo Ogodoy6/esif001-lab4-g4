@@ -25,6 +25,7 @@ dados/       medidas_audio.csv, medidas_imagem.csv (gerados nos notebooks)
              metricas_audio.csv, metricas_imagem.csv, resumo_metricas_imagem.csv,
              erro_por_regiao_*.csv (gerados por scripts/analise.py)
              notas_*_completas.csv, resumo_audio.csv, resumo_imagem.csv (notas da avaliação)
+             extensao_notas_*.csv (notas reais da atividade extensionista)
 figuras/     espectros, espectrogramas, tamanho x taxa, redução/PSNR, recortes de artefatos JPEG
 scripts/     analise.py (métricas e figuras); simular_avaliacao.py (notas simuladas)
 ```
