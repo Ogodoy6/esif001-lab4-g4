@@ -249,7 +249,7 @@ O repositório GitHub contém:
 
 O Lab 4 é a preparação para duas atividades extensionistas: um teste MUSHRA-like de áudio e um teste de degradação de imagem, aplicados a pessoas de fora do grupo. Pelo roteiro da disciplina, 16 participantes fazendo os dois testes equivalem a **2 h** de extensão, e 32 participantes (16 em cada teste) equivalem a **4 h**.
 
-**Situação:** planejada, ainda não realizada. Os resultados serão incluídos nesta seção depois das sessões.
+**Situação:** em andamento. 14 participantes avaliados até 29/10/2026 (meta: 16 para 2 h). Os resultados estão na seção 8.6.
 
 ### 8.1 Objetivo
 
@@ -262,12 +262,12 @@ O Lab 4 é a preparação para duas atividades extensionistas: um teste MUSHRA-l
 |---|---|---|
 | Áudio (MUSHRA-like) | Pacote do G4: referência identificada + 6 estímulos anônimos (referência oculta, âncora, MP3 48k, MP3 128k, AAC 48k e Vorbis 128k) | 0 a 100 por estímulo |
 | Imagem (pares) | 3 pares original × JPEG (`-q:v` 2, 20 e 31) da foto coletiva `G4_1792112691.png`, com lado e ordem sorteados | 0 a 3 (diferença percebida) |
-| Equipamento | Um notebook com os notebooks Lab4.4 e Lab4.5 adaptados para códigos P01–P32, um fone de ouvido e o mesmo volume e brilho de tela para todos | — |
+| Equipamento | Um notebook com os notebooks Lab4.4 e Lab4.5 adaptados para códigos E01–E32, um fone de ouvido e o mesmo volume e brilho de tela para todos | — |
 
 ### 8.3 Protocolo por participante (cerca de 12–15 min)
 
 1. **Acolhida:** explicação da tarefa em 1 minuto, assinatura da lista de presença e do termo de consentimento, se exigido.
-2. **Código anônimo:** o participante recebe um código (P01, P02…). O nome aparece só na lista de presença, nunca nos dados.
+2. **Código anônimo:** o participante recebe um código (E01, E02…). O nome aparece só na lista de presença, nunca nos dados.
 3. **Teste de áudio:** ouve a referência e dá uma nota de 0 a 100 para cada um dos 6 estímulos, podendo repetir à vontade.
 4. **Teste de imagem:** compara os 3 pares e indica a diferença percebida (0 = imperceptível, 1 = discreta, 2 = evidente, 3 = muito evidente).
 5. **Registro:** o notebook grava um CSV de áudio e um de imagem com o código do participante.
@@ -276,19 +276,19 @@ Exemplo do formato gravado (valores ilustrativos):
 
 ```
 avaliador,estimulo,nota_0_100
-P07,S01.wav,85
-P07,S02.wav,20
+E07,S01.wav,85
+E07,S02.wav,20
 ...
 avaliador,par,diferenca_0_3
-P07,P01,2
-P07,P02,0
+E07,P01,2
+E07,P02,0
 ```
 
 ### 8.4 Organização
 
 - **Meta:** 16 participantes fazendo os dois testes (2 h) ou 32 participantes, 16 em cada teste (4 h).
 - **Divisão:** cada integrante do G4 recruta e acompanha 4 participantes (ou 8, na meta de 4 h).
-- **Local:** sala silenciosa, com duas pessoas aplicando ao mesmo tempo. As 16 sessões cabem em uma tarde.
+- **Local:** as sessões foram feitas na casa de cada participante, com o próprio computador e fone.
 
 ### 8.5 Registro e evidências
 
@@ -298,6 +298,53 @@ P07,P02,0
 
 Tudo fica na pasta `MyDrive/Lab4_CSM/G4/extensao/`. Os nomes dos participantes não são publicados.
 
-### 8.6 Resultados
+### 8.6 Resultados (14 participantes)
 
-*A preencher após as sessões:* número de participantes, notas médias e dispersão por condição de áudio e por nível JPEG, e comparação com as medidas objetivas (banda, PSNR e SSIM) e com as notas simuladas das seções 3.2 e 4.3.
+Sessões realizadas até 29/10/2026 com 14 participantes (E01–E14), cada um fazendo os dois testes com o pacote de áudio e os pares de imagem do G4, em casa, com o próprio computador e fone. Os dados estão em `dados/extensao_notas_audio.csv` e `dados/extensao_notas_imagem.csv`.
+
+**Áudio (MUSHRA-like, 0–100)**
+
+| Condição | Banda (kHz) | n | Média | Desvio-padrão | Mediana | Mín–Máx |
+|---|---:|---:|---:|---:|---:|---:|
+| Referência oculta | 18,1 | 14 | 91,9 | 8,8 | 92,5 | 75–100 |
+| Vorbis 128k | 17,9 | 14 | 90,7 | 7,6 | 95,0 | 70–95 |
+| MP3 128k | 16,0 | 14 | 81,5 | 6,3 | 80,0 | 70–95 |
+| AAC 48k | 7,7 | 14 | 41,1 | 7,9 | 40,0 | 25–50 |
+| MP3 48k | 7,8 | 14 | 40,0 | 8,8 | 40,0 | 30–60 |
+| Âncora (LP 3,5 kHz) | 3,5 | 14 | 29,8 | 9,5 | 30,0 | 15–45 |
+
+**Imagem (diferença percebida, 0–3), foto `G4_1792112691.png`**
+
+| `-q:v` | Redução | SSIM | n | Diferença média | Desvio-padrão | Notas 0 / 1 / 2 / 3 |
+|---:|---:|---:|---:|---:|---:|---:|
+| 2 | 77,26 % | 0,979 | 14 | 1,43 | 0,51 | 0 / 8 / 6 / 0 |
+| 20 | 95,34 % | 0,864 | 14 | 1,71 | 1,14 | 2 / 5 / 2 / 5 |
+| 31 | 96,21 % | 0,829 | 14 | 1,50 | 0,65 | 0 / 8 / 5 / 1 |
+
+<details>
+<summary>Notas individuais (E01–E14)</summary>
+
+| Participante | Ref. | Vorbis 128k | MP3 128k | AAC 48k | MP3 48k | Âncora | q 2 | q 20 | q 31 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| E01 | 95 | 90 | 76 | 45 | 40 | 32 | 1 | 0 | 2 |
+| E02 | 100 | 95 | 80 | 25 | 30 | 35 | 2 | 1 | 1 |
+| E03 | 90 | 95 | 80 | 40 | 40 | 45 | 2 | 2 | 1 |
+| E04 | 100 | 95 | 80 | 50 | 35 | 25 | 2 | 1 | 1 |
+| E05 | 87 | 95 | 85 | 50 | 50 | 15 | 1 | 0 | 3 |
+| E06 | 90 | 95 | 90 | 35 | 30 | 20 | 1 | 3 | 1 |
+| E07 | 80 | 95 | 95 | 45 | 40 | 15 | 1 | 3 | 1 |
+| E08 | 80 | 70 | 70 | 40 | 30 | 25 | 2 | 3 | 1 |
+| E09 | 100 | 85 | 80 | 50 | 60 | 30 | 1 | 1 | 1 |
+| E10 | 75 | 95 | 80 | 30 | 45 | 30 | 1 | 3 | 2 |
+| E11 | 100 | 95 | 80 | 40 | 45 | 30 | 1 | 1 | 1 |
+| E12 | 90 | 80 | 85 | 35 | 30 | 45 | 2 | 3 | 2 |
+| E13 | 100 | 90 | 75 | 40 | 40 | 30 | 2 | 2 | 2 |
+| E14 | 100 | 95 | 85 | 50 | 45 | 40 | 1 | 1 | 2 |
+
+</details>
+
+- **Áudio — ordem clara entre as condições.** A referência oculta (91,9) e o Vorbis 128k (90,7) ficaram praticamente empatados, na faixa "excelente". O MP3 128k veio logo abaixo (81,5). As versões de 48 kbit/s caíram para ~40 (AAC 41,1 e MP3 40,0, sem diferença entre si), e a âncora ficou por último (29,8). A ordem acompanha a largura de banda medida na seção 3.1.
+- **O corte de banda domina a percepção.** Os dois codecs de 48 kbit/s cortam tudo acima de ~7,7 kHz e receberam notas quase iguais, ~50 pontos abaixo das versões de 128 kbit/s, que preservam a banda até 16–18 kHz. Para estes ouvintes, a diferença de taxa pesou muito mais que a diferença de codec.
+- **Consistência.** 4 participantes (E05, E07, E08 e E10) deram menos de 90 à referência oculta (75–87). Pelo critério da ITU-R BS.1534 eles seriam candidatos a exclusão; foram mantidos, porque sem eles as médias mudam pouco (referência 96,5; Vorbis 128k 91,5; MP3 128k 81,1; AAC 48k 41,0; MP3 48k 39,5; âncora 33,2) e a ordem das condições não se altera. Nenhum participante deu à referência nota menor ou igual à da âncora.
+- **Imagem — sem relação clara com o nível de compressão.** As médias ficaram próximas (q 2: 1,43; q 31: 1,50; q 20: 1,71) e a dispersão é grande, sobretudo em q 20, em que as notas se dividiram entre 0 e 3. Ninguém marcou q 2 como imperceptível (0), embora a seção 4.2 mostre que ele é praticamente idêntico ao original.
+- **Possíveis causas.** Os pares foram vistos em telas e tamanhos diferentes, em geral reduzidos, o que esconde a blocagem de q 20 e q 31. A escala pede a diferença percebida, mas parte dos participantes pode ter marcado sempre alguma diferença por esperar que ela existisse. Com uma única imagem e escala de 4 níveis, o teste de imagem tem pouca resolução; o de áudio, com escala 0–100 e referência, discriminou bem melhor.
