@@ -249,7 +249,7 @@ O repositório GitHub contém:
 
 O Lab 4 é a preparação para duas atividades extensionistas: um teste MUSHRA-like de áudio e um teste de degradação de imagem, aplicados a pessoas de fora do grupo. Pelo roteiro da disciplina, 16 participantes fazendo os dois testes equivalem a **2 h** de extensão, e 32 participantes (16 em cada teste) equivalem a **4 h**.
 
-**Situação:** em andamento. 14 participantes avaliados até 29/10/2026 (meta: 16 para 2 h). Os resultados estão na seção 8.6.
+**Situação:** realizada. 16 participantes fizeram os dois testes até 29/10/2026, atingindo a meta de 16 (2 h de extensão). Os resultados estão na seção 8.6.
 
 ### 8.1 Objetivo
 
@@ -288,7 +288,7 @@ E07,P02,0
 
 - **Meta:** 16 participantes fazendo os dois testes (2 h) ou 32 participantes, 16 em cada teste (4 h).
 - **Divisão:** cada integrante do G4 recruta e acompanha 4 participantes (ou 8, na meta de 4 h).
-- **Local:** as sessões foram feitas na casa de cada participante, com o próprio computador e fone.
+- **Local:** as sessões foram feitas em locais diferentes (casa, trabalho e outros), cada participante com o computador disponível e fone de ouvido.
 
 ### 8.5 Registro e evidências
 
@@ -298,53 +298,55 @@ E07,P02,0
 
 Tudo fica na pasta `MyDrive/Lab4_CSM/G4/extensao/`. Os nomes dos participantes não são publicados.
 
-### 8.6 Resultados (14 participantes)
+### 8.6 Resultados (16 participantes)
 
-Sessões realizadas até 29/10/2026 com 14 participantes (E01–E14), cada um fazendo os dois testes com o pacote de áudio e os pares de imagem do G4, em casa, com o próprio computador e fone. Os dados estão em `dados/extensao_notas_audio.csv` e `dados/extensao_notas_imagem.csv`.
+Sessões realizadas até 29/10/2026 com 16 participantes (E01–E16), cada um fazendo os dois testes com o pacote de áudio e os pares de imagem do G4, no próprio computador ou no disponível no local, com fone de ouvido. Os dados estão em `dados/extensao_notas_audio.csv` e `dados/extensao_notas_imagem.csv`.
 
 **Áudio (MUSHRA-like, 0–100)**
 
 | Condição | Banda (kHz) | n | Média | Desvio-padrão | Mediana | Mín–Máx |
 |---|---:|---:|---:|---:|---:|---:|
-| Referência oculta | 18,1 | 14 | 91,9 | 8,8 | 92,5 | 75–100 |
-| Vorbis 128k | 17,9 | 14 | 90,7 | 7,6 | 95,0 | 70–95 |
-| MP3 128k | 16,0 | 14 | 81,5 | 6,3 | 80,0 | 70–95 |
-| AAC 48k | 7,7 | 14 | 41,1 | 7,9 | 40,0 | 25–50 |
-| MP3 48k | 7,8 | 14 | 40,0 | 8,8 | 40,0 | 30–60 |
-| Âncora (LP 3,5 kHz) | 3,5 | 14 | 29,8 | 9,5 | 30,0 | 15–45 |
+| Referência oculta | 18,1 | 16 | 92,9 | 8,6 | 97,5 | 75–100 |
+| Vorbis 128k | 17,9 | 16 | 90,9 | 7,1 | 95,0 | 70–95 |
+| MP3 128k | 16,0 | 16 | 81,3 | 6,9 | 80,0 | 70–95 |
+| MP3 48k | 7,8 | 16 | 40,6 | 8,5 | 40,0 | 30–60 |
+| AAC 48k | 7,7 | 16 | 39,7 | 8,5 | 40,0 | 25–50 |
+| Âncora (LP 3,5 kHz) | 3,5 | 16 | 31,1 | 9,7 | 30,0 | 15–45 |
 
 **Imagem (diferença percebida, 0–3), foto `G4_1792112691.png`**
 
 | `-q:v` | Redução | SSIM | n | Diferença média | Desvio-padrão | Notas 0 / 1 / 2 / 3 |
 |---:|---:|---:|---:|---:|---:|---:|
-| 2 | 77,26 % | 0,979 | 14 | 1,43 | 0,51 | 0 / 8 / 6 / 0 |
-| 20 | 95,34 % | 0,864 | 14 | 1,71 | 1,14 | 2 / 5 / 2 / 5 |
-| 31 | 96,21 % | 0,829 | 14 | 1,50 | 0,65 | 0 / 8 / 5 / 1 |
+| 2 | 77,26 % | 0,979 | 16 | 1,56 | 0,63 | 0 / 8 / 7 / 1 |
+| 20 | 95,34 % | 0,864 | 16 | 1,75 | 1,13 | 2 / 6 / 2 / 6 |
+| 31 | 96,21 % | 0,829 | 16 | 1,44 | 0,63 | 0 / 10 / 5 / 1 |
 
 <details>
-<summary>Notas individuais (E01–E14)</summary>
+<summary>Notas individuais (E01–E16)</summary>
 
-| Participante | Ref. | Vorbis 128k | MP3 128k | AAC 48k | MP3 48k | Âncora | q 2 | q 20 | q 31 |
+| Participante | Ref. | Vorbis 128k | MP3 128k | MP3 48k | AAC 48k | Âncora | q 2 | q 20 | q 31 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| E01 | 95 | 90 | 76 | 45 | 40 | 32 | 1 | 0 | 2 |
-| E02 | 100 | 95 | 80 | 25 | 30 | 35 | 2 | 1 | 1 |
+| E01 | 95 | 90 | 76 | 40 | 45 | 32 | 1 | 0 | 2 |
+| E02 | 100 | 95 | 80 | 30 | 25 | 35 | 2 | 1 | 1 |
 | E03 | 90 | 95 | 80 | 40 | 40 | 45 | 2 | 2 | 1 |
-| E04 | 100 | 95 | 80 | 50 | 35 | 25 | 2 | 1 | 1 |
+| E04 | 100 | 95 | 80 | 35 | 50 | 25 | 2 | 1 | 1 |
 | E05 | 87 | 95 | 85 | 50 | 50 | 15 | 1 | 0 | 3 |
-| E06 | 90 | 95 | 90 | 35 | 30 | 20 | 1 | 3 | 1 |
-| E07 | 80 | 95 | 95 | 45 | 40 | 15 | 1 | 3 | 1 |
-| E08 | 80 | 70 | 70 | 40 | 30 | 25 | 2 | 3 | 1 |
-| E09 | 100 | 85 | 80 | 50 | 60 | 30 | 1 | 1 | 1 |
-| E10 | 75 | 95 | 80 | 30 | 45 | 30 | 1 | 3 | 2 |
-| E11 | 100 | 95 | 80 | 40 | 45 | 30 | 1 | 1 | 1 |
-| E12 | 90 | 80 | 85 | 35 | 30 | 45 | 2 | 3 | 2 |
+| E06 | 90 | 95 | 90 | 30 | 35 | 20 | 1 | 3 | 1 |
+| E07 | 80 | 95 | 95 | 40 | 45 | 15 | 1 | 3 | 1 |
+| E08 | 80 | 70 | 70 | 30 | 40 | 25 | 2 | 3 | 1 |
+| E09 | 100 | 85 | 80 | 60 | 50 | 30 | 1 | 1 | 1 |
+| E10 | 75 | 95 | 80 | 45 | 30 | 30 | 1 | 3 | 2 |
+| E11 | 100 | 95 | 80 | 45 | 40 | 30 | 1 | 1 | 1 |
+| E12 | 90 | 80 | 85 | 30 | 35 | 45 | 2 | 3 | 2 |
 | E13 | 100 | 90 | 75 | 40 | 40 | 30 | 2 | 2 | 2 |
-| E14 | 100 | 95 | 85 | 50 | 45 | 40 | 1 | 1 | 2 |
+| E14 | 100 | 95 | 85 | 45 | 50 | 40 | 1 | 1 | 2 |
+| E15 | 100 | 95 | 70 | 50 | 25 | 35 | 2 | 1 | 1 |
+| E16 | 100 | 90 | 90 | 40 | 35 | 45 | 3 | 3 | 1 |
 
 </details>
 
-- **Áudio — ordem clara entre as condições.** A referência oculta (91,9) e o Vorbis 128k (90,7) ficaram praticamente empatados, na faixa "excelente". O MP3 128k veio logo abaixo (81,5). As versões de 48 kbit/s caíram para ~40 (AAC 41,1 e MP3 40,0, sem diferença entre si), e a âncora ficou por último (29,8). A ordem acompanha a largura de banda medida na seção 3.1.
-- **O corte de banda domina a percepção.** Os dois codecs de 48 kbit/s cortam tudo acima de ~7,7 kHz e receberam notas quase iguais, ~50 pontos abaixo das versões de 128 kbit/s, que preservam a banda até 16–18 kHz. Para estes ouvintes, a diferença de taxa pesou muito mais que a diferença de codec.
-- **Consistência.** 4 participantes (E05, E07, E08 e E10) deram menos de 90 à referência oculta (75–87). Pelo critério da ITU-R BS.1534 eles seriam candidatos a exclusão; foram mantidos, porque sem eles as médias mudam pouco (referência 96,5; Vorbis 128k 91,5; MP3 128k 81,1; AAC 48k 41,0; MP3 48k 39,5; âncora 33,2) e a ordem das condições não se altera. Nenhum participante deu à referência nota menor ou igual à da âncora.
-- **Imagem — sem relação clara com o nível de compressão.** As médias ficaram próximas (q 2: 1,43; q 31: 1,50; q 20: 1,71) e a dispersão é grande, sobretudo em q 20, em que as notas se dividiram entre 0 e 3. Ninguém marcou q 2 como imperceptível (0), embora a seção 4.2 mostre que ele é praticamente idêntico ao original.
+- **Áudio — ordem clara entre as condições.** A referência oculta (92,9) e o Vorbis 128k (90,9) ficaram praticamente empatados, na faixa "excelente". O MP3 128k veio logo abaixo (81,3). As versões de 48 kbit/s caíram para ~40 (MP3 40,6 e AAC 39,7, sem diferença entre si), e a âncora ficou por último (31,1). A ordem acompanha a largura de banda medida na seção 3.1.
+- **O corte de banda domina a percepção.** Os dois codecs de 48 kbit/s cortam tudo acima de ~7,7 kHz e receberam notas quase iguais, ~40–50 pontos abaixo das versões de 128 kbit/s, que preservam a banda até 16–18 kHz. Para estes ouvintes, a diferença de taxa pesou muito mais que a diferença de codec.
+- **Consistência.** 4 participantes (E05, E07, E08 e E10) deram menos de 90 à referência oculta (75–87). Pelo critério da ITU-R BS.1534 eles seriam candidatos a exclusão; foram mantidos, porque sem eles as médias mudam pouco (referência 97,1; Vorbis 128k 91,7; MP3 128k 80,9; MP3 48k 40,4; AAC 48k 39,2; âncora 34,3) e a ordem das condições não se altera. Nenhum participante deu à referência nota menor ou igual à da âncora.
+- **Imagem — sem relação clara com o nível de compressão.** As médias ficaram próximas (q 2: 1,56; q 20: 1,75; q 31: 1,44) e a dispersão é grande, sobretudo em q 20, em que as notas se dividiram entre 0 e 3. Ninguém marcou q 2 como imperceptível (0), embora a seção 4.2 mostre que ele é praticamente idêntico ao original.
 - **Possíveis causas.** Os pares foram vistos em telas e tamanhos diferentes, em geral reduzidos, o que esconde a blocagem de q 20 e q 31. A escala pede a diferença percebida, mas parte dos participantes pode ter marcado sempre alguma diferença por esperar que ela existisse. Com uma única imagem e escala de 4 níveis, o teste de imagem tem pouca resolução; o de áudio, com escala 0–100 e referência, discriminou bem melhor.
