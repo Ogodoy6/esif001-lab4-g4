@@ -298,7 +298,7 @@ E07,P02,0
 
 Tudo fica na pasta `MyDrive/Lab4_CSM/G4/extensao/`. Os nomes dos participantes não são publicados.
 
-Registro fotográfico das sessões (32 participantes). As fotos não estão associadas aos códigos nem às notas.
+Registro fotográfico das sessões (32 participantes).
 
 ![Registro das sessões da atividade extensionista (1)](figuras/extensao_sessoes.webp)
 
