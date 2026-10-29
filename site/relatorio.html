@@ -559,7 +559,7 @@ hr{border:0;border-top:1px solid var(--line);margin:2em 0} li{margin:.25em 0}
 <hr />
 <h2>8. Atividade extensionista</h2>
 <p>O Lab 4 é a preparação para duas atividades extensionistas: um teste MUSHRA-like de áudio e um teste de degradação de imagem, aplicados a pessoas de fora do grupo. Pelo roteiro da disciplina, 16 participantes fazendo os dois testes equivalem a <strong>2 h</strong> de extensão, e 32 participantes (16 em cada teste) equivalem a <strong>4 h</strong>.</p>
-<p><strong>Situação:</strong> em andamento. 14 participantes avaliados até 29/10/2026 (meta: 16 para 2 h). Os resultados estão na seção 8.6.</p>
+<p><strong>Situação:</strong> realizada. 16 participantes fizeram os dois testes até 29/10/2026, atingindo a meta de 16 (2 h de extensão). Os resultados estão na seção 8.6.</p>
 <h3>8.1 Objetivo</h3>
 <ul>
 <li>Mostrar ao público, na prática, como a compressão com perdas afeta a qualidade percebida de áudio e imagem.</li>
@@ -594,7 +594,7 @@ E07,P02,0</pre>
 <ul>
 <li><strong>Meta:</strong> 16 participantes fazendo os dois testes (2 h) ou 32 participantes, 16 em cada teste (4 h).</li>
 <li><strong>Divisão:</strong> cada integrante do G4 recruta e acompanha 4 participantes (ou 8, na meta de 4 h).</li>
-<li><strong>Local:</strong> as sessões foram feitas na casa de cada participante, com o próprio computador e fone.</li>
+<li><strong>Local:</strong> as sessões foram feitas em locais diferentes (casa, trabalho e outros), cada participante com o computador disponível e fone de ouvido.</li>
 </ul>
 <h3>8.5 Registro e evidências</h3>
 <ul>
@@ -604,56 +604,58 @@ E07,P02,0</pre>
 </ul>
 <p>Tudo fica na pasta <code>MyDrive/Lab4_CSM/G4/extensao/</code>. Os nomes dos participantes não são publicados.</p>
 <style>table.num td:not(:first-child),table.num th:not(:first-child){text-align:right}</style>
-<h3>8.6 Resultados (14 participantes)</h3>
-<p>Sessões realizadas até 29/10/2026 com 14 participantes (E01–E14), cada um fazendo os dois testes com o pacote de áudio e os pares de imagem do G4, em casa, com o próprio computador e fone. Os dados estão em <code>dados/extensao_notas_audio.csv</code> e <code>dados/extensao_notas_imagem.csv</code>.</p>
+<h3>8.6 Resultados (16 participantes)</h3>
+<p>Sessões realizadas até 29/10/2026 com 16 participantes (E01–E16), cada um fazendo os dois testes com o pacote de áudio e os pares de imagem do G4, no próprio computador ou no disponível no local, com fone de ouvido. Os dados estão em <code>dados/extensao_notas_audio.csv</code> e <code>dados/extensao_notas_imagem.csv</code>.</p>
 <p><strong>Áudio (MUSHRA-like, 0–100)</strong></p>
 <table class="num">
 <thead><tr><th>Condição</th><th>Banda (kHz)</th><th>n</th><th>Média</th><th>Desvio-padrão</th><th>Mediana</th><th>Mín–Máx</th></tr></thead>
 <tbody>
-<tr><td>Referência oculta</td><td>18,1</td><td>14</td><td>91,9</td><td>8,8</td><td>92,5</td><td>75–100</td></tr>
-<tr><td>Vorbis 128k</td><td>17,9</td><td>14</td><td>90,7</td><td>7,6</td><td>95,0</td><td>70–95</td></tr>
-<tr><td>MP3 128k</td><td>16,0</td><td>14</td><td>81,5</td><td>6,3</td><td>80,0</td><td>70–95</td></tr>
-<tr><td>AAC 48k</td><td>7,7</td><td>14</td><td>41,1</td><td>7,9</td><td>40,0</td><td>25–50</td></tr>
-<tr><td>MP3 48k</td><td>7,8</td><td>14</td><td>40,0</td><td>8,8</td><td>40,0</td><td>30–60</td></tr>
-<tr><td>Âncora (LP 3,5 kHz)</td><td>3,5</td><td>14</td><td>29,8</td><td>9,5</td><td>30,0</td><td>15–45</td></tr>
+<tr><td>Referência oculta</td><td>18,1</td><td>16</td><td>92,9</td><td>8,6</td><td>97,5</td><td>75–100</td></tr>
+<tr><td>Vorbis 128k</td><td>17,9</td><td>16</td><td>90,9</td><td>7,1</td><td>95,0</td><td>70–95</td></tr>
+<tr><td>MP3 128k</td><td>16,0</td><td>16</td><td>81,3</td><td>6,9</td><td>80,0</td><td>70–95</td></tr>
+<tr><td>MP3 48k</td><td>7,8</td><td>16</td><td>40,6</td><td>8,5</td><td>40,0</td><td>30–60</td></tr>
+<tr><td>AAC 48k</td><td>7,7</td><td>16</td><td>39,7</td><td>8,5</td><td>40,0</td><td>25–50</td></tr>
+<tr><td>Âncora (LP 3,5 kHz)</td><td>3,5</td><td>16</td><td>31,1</td><td>9,7</td><td>30,0</td><td>15–45</td></tr>
 </tbody>
 </table>
 <p><strong>Imagem (diferença percebida, 0–3), foto <code>G4_1792112691.png</code></strong></p>
 <table class="num">
 <thead><tr><th><code>-q:v</code></th><th>Redução</th><th>SSIM</th><th>n</th><th>Diferença média</th><th>Desvio-padrão</th><th>Notas 0 / 1 / 2 / 3</th></tr></thead>
 <tbody>
-<tr><td>2</td><td>77,26 %</td><td>0,979</td><td>14</td><td>1,43</td><td>0,51</td><td>0 / 8 / 6 / 0</td></tr>
-<tr><td>20</td><td>95,34 %</td><td>0,864</td><td>14</td><td>1,71</td><td>1,14</td><td>2 / 5 / 2 / 5</td></tr>
-<tr><td>31</td><td>96,21 %</td><td>0,829</td><td>14</td><td>1,50</td><td>0,65</td><td>0 / 8 / 5 / 1</td></tr>
+<tr><td>2</td><td>77,26 %</td><td>0,979</td><td>16</td><td>1,56</td><td>0,63</td><td>0 / 8 / 7 / 1</td></tr>
+<tr><td>20</td><td>95,34 %</td><td>0,864</td><td>16</td><td>1,75</td><td>1,13</td><td>2 / 6 / 2 / 6</td></tr>
+<tr><td>31</td><td>96,21 %</td><td>0,829</td><td>16</td><td>1,44</td><td>0,63</td><td>0 / 10 / 5 / 1</td></tr>
 </tbody>
 </table>
 <details>
-<summary>Notas individuais (E01–E14)</summary>
+<summary>Notas individuais (E01–E16)</summary>
 <table class="num">
-<thead><tr><th>Participante</th><th>Ref.</th><th>Vorbis 128k</th><th>MP3 128k</th><th>AAC 48k</th><th>MP3 48k</th><th>Âncora</th><th>q 2</th><th>q 20</th><th>q 31</th></tr></thead>
+<thead><tr><th>Participante</th><th>Ref.</th><th>Vorbis 128k</th><th>MP3 128k</th><th>MP3 48k</th><th>AAC 48k</th><th>Âncora</th><th>q 2</th><th>q 20</th><th>q 31</th></tr></thead>
 <tbody>
-<tr><td>E01</td><td>95</td><td>90</td><td>76</td><td>45</td><td>40</td><td>32</td><td>1</td><td>0</td><td>2</td></tr>
-<tr><td>E02</td><td>100</td><td>95</td><td>80</td><td>25</td><td>30</td><td>35</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>E01</td><td>95</td><td>90</td><td>76</td><td>40</td><td>45</td><td>32</td><td>1</td><td>0</td><td>2</td></tr>
+<tr><td>E02</td><td>100</td><td>95</td><td>80</td><td>30</td><td>25</td><td>35</td><td>2</td><td>1</td><td>1</td></tr>
 <tr><td>E03</td><td>90</td><td>95</td><td>80</td><td>40</td><td>40</td><td>45</td><td>2</td><td>2</td><td>1</td></tr>
-<tr><td>E04</td><td>100</td><td>95</td><td>80</td><td>50</td><td>35</td><td>25</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>E04</td><td>100</td><td>95</td><td>80</td><td>35</td><td>50</td><td>25</td><td>2</td><td>1</td><td>1</td></tr>
 <tr><td>E05</td><td>87</td><td>95</td><td>85</td><td>50</td><td>50</td><td>15</td><td>1</td><td>0</td><td>3</td></tr>
-<tr><td>E06</td><td>90</td><td>95</td><td>90</td><td>35</td><td>30</td><td>20</td><td>1</td><td>3</td><td>1</td></tr>
-<tr><td>E07</td><td>80</td><td>95</td><td>95</td><td>45</td><td>40</td><td>15</td><td>1</td><td>3</td><td>1</td></tr>
-<tr><td>E08</td><td>80</td><td>70</td><td>70</td><td>40</td><td>30</td><td>25</td><td>2</td><td>3</td><td>1</td></tr>
-<tr><td>E09</td><td>100</td><td>85</td><td>80</td><td>50</td><td>60</td><td>30</td><td>1</td><td>1</td><td>1</td></tr>
-<tr><td>E10</td><td>75</td><td>95</td><td>80</td><td>30</td><td>45</td><td>30</td><td>1</td><td>3</td><td>2</td></tr>
-<tr><td>E11</td><td>100</td><td>95</td><td>80</td><td>40</td><td>45</td><td>30</td><td>1</td><td>1</td><td>1</td></tr>
-<tr><td>E12</td><td>90</td><td>80</td><td>85</td><td>35</td><td>30</td><td>45</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td>E06</td><td>90</td><td>95</td><td>90</td><td>30</td><td>35</td><td>20</td><td>1</td><td>3</td><td>1</td></tr>
+<tr><td>E07</td><td>80</td><td>95</td><td>95</td><td>40</td><td>45</td><td>15</td><td>1</td><td>3</td><td>1</td></tr>
+<tr><td>E08</td><td>80</td><td>70</td><td>70</td><td>30</td><td>40</td><td>25</td><td>2</td><td>3</td><td>1</td></tr>
+<tr><td>E09</td><td>100</td><td>85</td><td>80</td><td>60</td><td>50</td><td>30</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>E10</td><td>75</td><td>95</td><td>80</td><td>45</td><td>30</td><td>30</td><td>1</td><td>3</td><td>2</td></tr>
+<tr><td>E11</td><td>100</td><td>95</td><td>80</td><td>45</td><td>40</td><td>30</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>E12</td><td>90</td><td>80</td><td>85</td><td>30</td><td>35</td><td>45</td><td>2</td><td>3</td><td>2</td></tr>
 <tr><td>E13</td><td>100</td><td>90</td><td>75</td><td>40</td><td>40</td><td>30</td><td>2</td><td>2</td><td>2</td></tr>
-<tr><td>E14</td><td>100</td><td>95</td><td>85</td><td>50</td><td>45</td><td>40</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>E14</td><td>100</td><td>95</td><td>85</td><td>45</td><td>50</td><td>40</td><td>1</td><td>1</td><td>2</td></tr>
+<tr><td>E15</td><td>100</td><td>95</td><td>70</td><td>50</td><td>25</td><td>35</td><td>2</td><td>1</td><td>1</td></tr>
+<tr><td>E16</td><td>100</td><td>90</td><td>90</td><td>40</td><td>35</td><td>45</td><td>3</td><td>3</td><td>1</td></tr>
 </tbody>
 </table>
 </details>
 <ul>
-<li><strong>Áudio — ordem clara entre as condições.</strong> A referência oculta (91,9) e o Vorbis 128k (90,7) ficaram praticamente empatados, na faixa "excelente". O MP3 128k veio logo abaixo (81,5). As versões de 48 kbit/s caíram para ~40 (AAC 41,1 e MP3 40,0, sem diferença entre si), e a âncora ficou por último (29,8). A ordem acompanha a largura de banda medida na seção 3.1.</li>
-<li><strong>O corte de banda domina a percepção.</strong> Os dois codecs de 48 kbit/s cortam tudo acima de ~7,7 kHz e receberam notas quase iguais, ~50 pontos abaixo das versões de 128 kbit/s, que preservam a banda até 16–18 kHz. Para estes ouvintes, a diferença de taxa pesou muito mais que a diferença de codec.</li>
-<li><strong>Consistência.</strong> 4 participantes (E05, E07, E08 e E10) deram menos de 90 à referência oculta (75–87). Pelo critério da ITU-R BS.1534 eles seriam candidatos a exclusão; foram mantidos, porque sem eles as médias mudam pouco (referência 96,5; Vorbis 128k 91,5; MP3 128k 81,1; AAC 48k 41,0; MP3 48k 39,5; âncora 33,2) e a ordem das condições não se altera. Nenhum participante deu à referência nota menor ou igual à da âncora.</li>
-<li><strong>Imagem — sem relação clara com o nível de compressão.</strong> As médias ficaram próximas (q 2: 1,43; q 31: 1,50; q 20: 1,71) e a dispersão é grande, sobretudo em q 20, em que as notas se dividiram entre 0 e 3. Ninguém marcou q 2 como imperceptível (0), embora a seção 4.2 mostre que ele é praticamente idêntico ao original.</li>
+<li><strong>Áudio — ordem clara entre as condições.</strong> A referência oculta (92,9) e o Vorbis 128k (90,9) ficaram praticamente empatados, na faixa "excelente". O MP3 128k veio logo abaixo (81,3). As versões de 48 kbit/s caíram para ~40 (MP3 40,6 e AAC 39,7, sem diferença entre si), e a âncora ficou por último (31,1). A ordem acompanha a largura de banda medida na seção 3.1.</li>
+<li><strong>O corte de banda domina a percepção.</strong> Os dois codecs de 48 kbit/s cortam tudo acima de ~7,7 kHz e receberam notas quase iguais, ~40–50 pontos abaixo das versões de 128 kbit/s, que preservam a banda até 16–18 kHz. Para estes ouvintes, a diferença de taxa pesou muito mais que a diferença de codec.</li>
+<li><strong>Consistência.</strong> 4 participantes (E05, E07, E08 e E10) deram menos de 90 à referência oculta (75–87). Pelo critério da ITU-R BS.1534 eles seriam candidatos a exclusão; foram mantidos, porque sem eles as médias mudam pouco (referência 97,1; Vorbis 128k 91,7; MP3 128k 80,9; MP3 48k 40,4; AAC 48k 39,2; âncora 34,3) e a ordem das condições não se altera. Nenhum participante deu à referência nota menor ou igual à da âncora.</li>
+<li><strong>Imagem — sem relação clara com o nível de compressão.</strong> As médias ficaram próximas (q 2: 1,56; q 20: 1,75; q 31: 1,44) e a dispersão é grande, sobretudo em q 20, em que as notas se dividiram entre 0 e 3. Ninguém marcou q 2 como imperceptível (0), embora a seção 4.2 mostre que ele é praticamente idêntico ao original.</li>
 <li><strong>Possíveis causas.</strong> Os pares foram vistos em telas e tamanhos diferentes, em geral reduzidos, o que esconde a blocagem de q 20 e q 31. A escala pede a diferença percebida, mas parte dos participantes pode ter marcado sempre alguma diferença por esperar que ela existisse. Com uma única imagem e escala de 4 níveis, o teste de imagem tem pouca resolução; o de áudio, com escala 0–100 e referência, discriminou bem melhor.</li>
 </ul>
 </main></body></html>
